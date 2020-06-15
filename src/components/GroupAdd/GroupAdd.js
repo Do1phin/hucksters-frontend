@@ -6,7 +6,7 @@ import {store} from '../../redux/store';
 import {GroupAddAsyncAction} from '../../containers/Groups/groups.actions';
 import {loadingStart, loadingStop} from '../../redux/actions/generalSettings.actions';
 // React components
-import Spinner from '../Spinners/GeneralSpinner';
+import {Spinner} from '../Spinners/GeneralSpinner';
 // Styles
 import '../../styles/groups.style.scss';
 
@@ -72,4 +72,6 @@ const GroupAdd = () => {
             ));
 };
 
-export default GroupAdd;
+export {
+    GroupAdd
+};

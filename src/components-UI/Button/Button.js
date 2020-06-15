@@ -1,4 +1,3 @@
-// * Component Button
 // Core
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -20,7 +19,9 @@ const Button = (props) => {
     );
 };
 
-export default Button;
+export {
+    Button
+};
 
 Button.propTypes = {
     type: PropTypes.string,

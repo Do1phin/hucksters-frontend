@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Services
 import {stampToDate} from '../../services/date.service';
 // React components
-import FavoriteBtn from '../FavoriteBtn/FavoriteBtn';
+import {FavoriteBtn} from '../FavoriteBtn/FavoriteBtn';
 
 const PhotoCard = (props) => {
 
@@ -99,4 +99,6 @@ PhotoCard.propTypes = {
     photo: PropTypes.string,
 };
 
-export default PhotoCard;
+export {
+    PhotoCard
+};

@@ -6,9 +6,9 @@ import {APIReadMembersFromDB} from '../../containers/Members/members.api';
 import {APIReadPhotosFromDB} from '../../containers/Photos/photos.api';
 import {APIReadAlbumsFromDB} from '../../containers/Albums/albums.api';
 // React components
-import AlbumCardSmall from '../AlbumCardSmall/AlbumCardSmall';
-import MemberInfo from '../MemberInfo/MemberInfo';
-import Spinner from '../Spinners/GeneralSpinner';
+import {AlbumCardSmall} from '../AlbumCardSmall/AlbumCardSmall';
+import {MemberInfo} from '../MemberInfo/MemberInfo';
+import {Spinner} from '../Spinners/GeneralSpinner';
 // Styles
 import '../../styles/memberPage.style.scss';
 
@@ -129,7 +129,9 @@ const MemberPage = (props) => {
     );
 };
 
-export default MemberPage;
+export {
+    MemberPage
+};
 
 MemberPage.propTypes = {
     owner_id: PropTypes.number.isRequired

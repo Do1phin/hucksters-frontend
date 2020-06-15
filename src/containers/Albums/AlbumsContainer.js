@@ -6,13 +6,13 @@ import {loadingStart, loadingStop} from '../../redux/actions/generalSettings.act
 import {ListSettingsSetLoadMoreAction} from '../../redux/actions/listSettings.actions';
 import {AlbumsFillAsyncAction} from './albums.actions';
 // React components
-import ItemsSize from '../../components/ItemsSize/ItemsSize';
-import AlbumList from '../../components/AlbumList/AlbumList';
-import SearchContainer from '../Search/SearchContainer';
-import LimitSelect from '../../components/UI/LimitSelect/LimitSelect';
-import SortSelect from '../../components/UI/SortSelect/SortSelect';
-import LoadMoreBtn from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
-import Spinner from '../../components/Spinners/GeneralSpinner';
+import {ItemsSize} from '../../components/ItemsSize/ItemsSize';
+import {AlbumList} from '../../components/AlbumList/AlbumList';
+import {SearchContainer} from '../Search/SearchContainer';
+import {LimitSelect} from '../../components/UI/LimitSelect/LimitSelect';
+import {SortSelect} from '../../components/UI/SortSelect/SortSelect';
+import {LoadMoreBtn} from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
+import {Spinner} from '../../components/Spinners/GeneralSpinner';
 // Styles
 import '../../styles/albums.style.scss';
 
@@ -71,4 +71,6 @@ const AlbumsContainer = () => {
     );
 };
 
-export default AlbumsContainer;
+export {
+    AlbumsContainer
+};

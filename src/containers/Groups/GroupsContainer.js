@@ -2,9 +2,9 @@
 import React, {Fragment, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 // React components
-import GroupList from '../../components/GroupList/GroupList';
-import GroupAdd from '../../components/GroupAdd/GroupAdd';
-import Spinner from '../../components/Spinners/GeneralSpinner';
+import {GroupList} from '../../components/GroupList/GroupList';
+import {GroupAdd} from '../../components/GroupAdd/GroupAdd';
+import {Spinner} from '../../components/Spinners/GeneralSpinner';
 // React actions
 import {GroupsFillAsyncAction} from './groups.actions';
 // Styles
@@ -35,4 +35,6 @@ const GroupsContainer = () => {
     );
 };
 
-export default GroupsContainer;
+export {
+    GroupsContainer
+};

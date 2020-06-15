@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // React components
-import GroupCard from '../GroupCard/GroupCard';
+import {GroupCard} from '../GroupCard/GroupCard';
 
 const GroupList = (props) => {
 
@@ -44,7 +44,9 @@ const GroupList = (props) => {
     );
 };
 
-export default GroupList;
+export {
+    GroupList
+};
 
 GroupList.propTypes = {
     groups: PropTypes.array.isRequired

@@ -15,4 +15,6 @@ const SpinnerItem = () => {
     );
 };
 
-export default SpinnerItem;
+export {
+    SpinnerItem
+};

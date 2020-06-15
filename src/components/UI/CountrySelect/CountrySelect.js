@@ -32,4 +32,6 @@ const CountrySelect = () => {
     );
 };
 
-export default CountrySelect;
+export {
+    CountrySelect
+};

@@ -27,4 +27,6 @@ const SortSelect = () => {
     );
 };
 
-export default SortSelect;
+export {
+    SortSelect
+};

@@ -10,4 +10,6 @@ const PhotoPage = () => {
     );
 };
 
-export default PhotoPage;
+export {
+    PhotoPage
+};

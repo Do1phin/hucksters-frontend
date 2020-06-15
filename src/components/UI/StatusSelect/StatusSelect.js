@@ -31,4 +31,6 @@ const StatusSelect = () => {
     );
 };
 
-export default StatusSelect;
+export {
+    StatusSelect
+};

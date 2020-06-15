@@ -2,17 +2,17 @@
 import React, { FC } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // React components
-import NotFound from './components/errors';
+import {NotFound} from './components/errors';
 import ErrorBoundary from './components/errors/ErrorBoundary';
-import AuthPage from './containers/AuthPage/AuthPage';
-import HomePage from './containers/HomePage/HomePage';
-import MembersContainer from './containers/Members/MembersContainer';
-import AlbumsContainer from './containers/Albums/AlbumsContainer';
-import PhotosContainer from './containers/Photos/PhotosContainer';
-import SearchContainer from './containers/Search/SearchContainer';
-import AdminPanelContainer from './containers/AdminPanel/AdminPanelContainer';
-import Header from './components/header';
-import Footer from './components/footer';
+import {AuthPage} from './containers/AuthPage/AuthPage';
+import {HomePage} from './containers/HomePage/HomePage';
+import {MembersContainer} from './containers/Members/MembersContainer';
+import {AlbumsContainer} from './containers/Albums/AlbumsContainer';
+import {PhotosContainer} from './containers/Photos/PhotosContainer';
+import {SearchContainer} from './containers/Search/SearchContainer';
+import {AdminPanelContainer} from './containers/AdminPanel/AdminPanelContainer';
+import {Header} from './components/header/Header';
+import {Footer} from './components/footer/Footer';
 // Styles
 import './App.scss';
 

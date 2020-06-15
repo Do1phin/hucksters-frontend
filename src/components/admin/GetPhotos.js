@@ -88,4 +88,6 @@ const GetPhotos = () => {
     )
 };
 
-export default GetPhotos;
+export {
+    GetPhotos
+};

@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // React components
-import AlbumCard from '../AlbumCard/AlbumCard';
+import {AlbumCard} from '../AlbumCard/AlbumCard';
 
 const AlbumList = (props) => {
 
@@ -15,7 +15,9 @@ const AlbumList = (props) => {
     ));
 };
 
-export default AlbumList;
+export {
+    AlbumList
+};
 
 AlbumList.propTypes = {
     albums: PropTypes.array.isRequired

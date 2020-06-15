@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // React components
-import PhotoCard from '../PhotoCard/PhotoCard';
+import { PhotoCard } from '../PhotoCard/PhotoCard';
 
 const PhotoList = (props) => {
 
@@ -34,7 +34,9 @@ const PhotoList = (props) => {
     });
 };
 
-export default PhotoList;
+export {
+    PhotoList
+};
 
 PhotoList.propTypes = {
     photos: PropTypes.array.isRequired,
