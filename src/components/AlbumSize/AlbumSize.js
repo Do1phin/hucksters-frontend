@@ -16,7 +16,9 @@ const AlbumSize = (props) => {
     );
 };
 
-export default AlbumSize;
+export {
+    AlbumSize
+};
 
 AlbumSize.propTypes = {
     list_settings: PropTypes.object.isRequired,

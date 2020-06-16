@@ -7,14 +7,14 @@ import {ListSettingsSetLoadMoreAction} from '../../redux/actions/listSettings.ac
 import {MembersFillAsyncAction} from './members.actions';
 import {FavoritesGetAsyncAction} from '../../redux/actions/favorite.actions';
 // React components
-import SearchContainer from '../Search/SearchContainer';
-import LimitSelect from '../../components/UI/LimitSelect/LimitSelect';
-import LoadMoreBtn from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
-import ItemsSize from '../../components/ItemsSize/ItemsSize';
-import MemberList from '../../components/MemberList/MemberList';
-import StatusSelect from '../../components/UI/StatusSelect/StatusSelect';
-import CountrySelect from '../../components/UI/CountrySelect/CountrySelect';
-import Spinner from '../../components/Spinners/GeneralSpinner';
+import {SearchContainer} from '../Search/SearchContainer';
+import {LimitSelect} from '../../components/UI/LimitSelect/LimitSelect';
+import {LoadMoreBtn} from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
+import {ItemsSize} from '../../components/ItemsSize/ItemsSize';
+import {MemberList} from '../../components/MemberList/MemberList';
+import {StatusSelect} from '../../components/UI/StatusSelect/StatusSelect';
+import {CountrySelect} from '../../components/UI/CountrySelect/CountrySelect';
+import {Spinner} from '../../components/Spinners/GeneralSpinner';
 // Styles
 import '../../styles/members.style.scss';
 
@@ -75,4 +75,6 @@ const MembersContainer = (props) => {
     );
 };
 
-export default MembersContainer;
+export {
+    MembersContainer
+};

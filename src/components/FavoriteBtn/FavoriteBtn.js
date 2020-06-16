@@ -47,4 +47,6 @@ FavoriteBtn.propTypes = {
     photo_id: PropTypes.number.isRequired
 };
 
-export default FavoriteBtn;
+export {
+    FavoriteBtn
+};

@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // React components
-import MemberCard from '../MemberCard/MemberCard';
+import {MemberCard} from '../MemberCard/MemberCard';
 
 const MemberList = (props) => {
 
@@ -15,7 +15,9 @@ const MemberList = (props) => {
     ));
 };
 
-export default MemberList;
+export {
+    MemberList
+};
 
 MemberList.propTypes = {
     members: PropTypes.array.isRequired

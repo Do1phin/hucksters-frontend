@@ -1,11 +1,11 @@
 // Core
 import React, {Fragment} from 'react';
 // React components
-import CheckGroup from '../../components/group/CheckGroup';
-import GetComments from '../../components/admin/GetComments';
-import GetPhotos from '../../components/admin/GetPhotos';
-import Counters from '../../components/Counters/Counters';
-import GroupsContainer from '../Groups/GroupsContainer';
+import {CheckGroup} from '../../components/group/CheckGroup';
+import {GetComments} from '../../components/admin/GetComments';
+import {GetPhotos} from '../../components/admin/GetPhotos';
+import {Counters} from '../../components/Counters/Counters';
+import {GroupsContainer} from '../Groups/GroupsContainer';
 
 const AdminPanelContainer = () => {
 
@@ -21,4 +21,6 @@ const AdminPanelContainer = () => {
     );
 };
 
-export default AdminPanelContainer;
+export {
+    AdminPanelContainer
+};

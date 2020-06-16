@@ -114,4 +114,6 @@ const GetAlbums = () => {
     )
 };
 
-export default GetAlbums;
+export {
+    GetAlbums
+};

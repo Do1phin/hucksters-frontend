@@ -100,7 +100,9 @@ const GroupCard = (props) => {
     );
 };
 
-export default GroupCard;
+export {
+    GroupCard
+};
 
 GroupCard.propTypes = {
     item: PropTypes.object.isRequired,

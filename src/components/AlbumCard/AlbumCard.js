@@ -39,7 +39,9 @@ const AlbumCard = (props) => {
     );
 };
 
-export default AlbumCard;
+export {
+    AlbumCard
+};
 
 AlbumCard.propTypes = {
     owner_id: PropTypes.number.isRequired,

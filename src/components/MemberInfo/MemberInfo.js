@@ -39,7 +39,9 @@ const MemberInfo = (props) => {
     );
 };
 
-export default MemberInfo;
+export {
+    MemberInfo
+};
 
 MemberInfo.propTypes = {
     owner_id: PropTypes.number,

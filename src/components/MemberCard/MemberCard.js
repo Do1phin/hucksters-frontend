@@ -36,7 +36,9 @@ const MemberCard = (props) => {
     );
 };
 
-export default MemberCard;
+export {
+    MemberCard
+};
 
 MemberCard.propTypes = {
     owner_id: PropTypes.number.isRequired,

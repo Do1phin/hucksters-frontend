@@ -11,7 +11,9 @@ const AlbumPage = (props) => {
     );
 };
 
-export default AlbumPage;
+export {
+    AlbumPage
+};
 
 AlbumPage.propTypes = {
     owner_id: PropTypes.number.isRequired,
