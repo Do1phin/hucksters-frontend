@@ -30,4 +30,6 @@ const LimitSelect = () => {
     );
 };
 
-export default LimitSelect;
+export {
+    LimitSelect
+};

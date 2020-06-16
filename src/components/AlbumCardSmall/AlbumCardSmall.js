@@ -32,7 +32,9 @@ const AlbumCardSmall = (props) => {
     );
 };
 
-export default AlbumCardSmall;
+export {
+    AlbumCardSmall
+};
 
 AlbumCardSmall.propTypes = {
     owner_id: PropTypes.number.isRequired,

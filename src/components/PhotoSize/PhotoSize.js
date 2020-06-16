@@ -16,7 +16,9 @@ const PhotoSize = (props) => {
     );
 };
 
-export default PhotoSize;
+export {
+    PhotoSize
+};
 
 PhotoSize.propTypes = {
     list_settings: PropTypes.object.isRequired

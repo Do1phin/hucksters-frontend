@@ -35,4 +35,6 @@ const LoadMoreBtn = () => {
     );
 };
 
-export default LoadMoreBtn;
+export {
+    LoadMoreBtn
+};

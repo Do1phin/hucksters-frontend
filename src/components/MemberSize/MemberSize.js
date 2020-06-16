@@ -17,7 +17,9 @@ const MembersSize = (props) => {
     );
 };
 
-export default MembersSize;
+export {
+    MembersSize
+};
 
 MembersSize.propTypes = {
     list_settings: PropTypes.object.isRequired

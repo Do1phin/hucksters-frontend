@@ -16,7 +16,9 @@ const ItemsSize = (props) => {
     );
 };
 
-export default ItemsSize;
+export {
+    ItemsSize
+};
 
 ItemsSize.propTypes = {
     loading: PropTypes.bool.isRequired,

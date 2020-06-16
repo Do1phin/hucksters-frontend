@@ -66,4 +66,6 @@ const SearchContainer = () => {
     );
 };
 
-export default SearchContainer;
+export {
+    SearchContainer
+};

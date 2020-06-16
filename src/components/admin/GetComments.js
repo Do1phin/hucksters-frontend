@@ -106,4 +106,6 @@ const GetComments = () => {
     )
 };
 
-export default GetComments;
+export {
+    GetComments
+};

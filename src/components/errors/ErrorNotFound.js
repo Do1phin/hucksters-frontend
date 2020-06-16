@@ -30,4 +30,6 @@ ErrorNotFound.propTypes = {
     title: PropTypes.string
 };
 
-export default ErrorNotFound;
+export {
+    ErrorNotFound
+};

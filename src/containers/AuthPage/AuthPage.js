@@ -177,4 +177,6 @@ function AuthPage(props) {
 
 }
 
-export default AuthPage;
+export {
+    AuthPage
+};

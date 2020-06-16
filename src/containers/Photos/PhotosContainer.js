@@ -8,17 +8,17 @@ import {FavoritesGetAsyncAction} from '../../redux/actions/favorite.actions';
 import {PhotosFillAsyncAction} from './photos.actions';
 import {SomeMembersFillAsyncAction} from '../Members/members.actions';
 // React components
-import PhotoList from '../../components/PhotoList/PhotoList';
-import ItemsSize from '../../components/ItemsSize/ItemsSize';
-import SearchContainer from '../Search/SearchContainer';
-import LimitSelect from '../../components/UI/LimitSelect/LimitSelect';
-import SortSelect from '../../components/UI/SortSelect/SortSelect';
-import LoadMoreBtn from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
-import Spinner from '../../components/Spinners/GeneralSpinner';
+import {PhotoList} from '../../components/PhotoList/PhotoList';
+import {ItemsSize} from '../../components/ItemsSize/ItemsSize';
+import {SearchContainer} from '../Search/SearchContainer';
+import {LimitSelect} from '../../components/UI/LimitSelect/LimitSelect';
+import {SortSelect} from '../../components/UI/SortSelect/SortSelect';
+import {LoadMoreBtn} from '../../components/UI/LoadMoreBtn/LoadMoreBtn';
+import {Spinner} from '../../components/Spinners/GeneralSpinner';
 // Styles
 import '../../styles/photos.style.scss';
 
-const Photos = () => {
+const PhotosContainer = () => {
 
     const dispatch = useDispatch();
 
@@ -78,4 +78,6 @@ const Photos = () => {
     );
 };
 
-export default Photos;
+export {
+    PhotosContainer
+};

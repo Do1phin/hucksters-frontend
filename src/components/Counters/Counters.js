@@ -82,4 +82,6 @@ const Counters = () => {
     )
 };
 
-export default Counters;
+export {
+    Counters
+};
