@@ -60,11 +60,10 @@ const getMembersGroupFromVk = ({group_id, count}) => new Promise((resolve, rejec
 // Получаем подробную информацию по пользователям
 const getMembersInfoFromVk = (membersArray) => new Promise((resolve, reject) => {
     // const dispatch = useDispatch();
-    store.dispatch(CheckerSetStatusStringAction('- получение информации о пользователях из ВК...'));
-    console.log('getMembersInfoFromVk' , membersArray);
+    // store.dispatch(CheckerSetStatusStringAction('- получение информации о пользователях из ВК...'));
 
     const params = {
-        user_ids: membersArray.join(),
+        user_ids: membersArray.owner_id,
         fields: 'photo_id, verified, sex, bdate, city, country, home_town, has_photo, photo_50, photo_100, ' +
             'photo_200_orig, photo_200, photo_400_orig, photo_max, photo_max_orig, online, domain, has_mobile, ' +
             'contacts, site, education, universities, schools, status, last_seen, followers_count, common_count, ' +
@@ -81,7 +80,6 @@ const getMembersInfoFromVk = (membersArray) => new Promise((resolve, reject) => 
         .then((response) => {
             if (response) resolve(response.response);
         }).catch((err) => reject(err));
-
 });
 
 // Получаем все фотографии из альбома

@@ -1,8 +1,3 @@
-import { call, getMembersGroupFromVk, getMembersInfoFromVk } from "../../components/admin/_api-vk";
-import { APICreateMembersToDB, APIUpdateMembersInDB } from "../Members/members.api";
-import { CheckerSetStepNumberAction } from "../../redux/actions/check.actions";
-import { store } from "../../redux/store";
-
 // Создаём группу в базе
 const APICreateGroupInDB = (groupObj) => {
     const {id, name, size, photo_200} = groupObj;

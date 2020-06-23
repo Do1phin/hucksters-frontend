@@ -11,6 +11,10 @@ const initialState = {
 
 const checkMemberReducer = (state = initialState, action) => {
     switch (action.type) {
+        case types.CHECK_MEMBERS_ALL_PARAMETERS:
+            return {
+                ...state
+            };
         case types.CHECK_MEMBERS_ALL:
             return {
                 ...state,

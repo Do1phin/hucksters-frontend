@@ -6,6 +6,7 @@ import {GetComments} from '../../components/admin/GetComments';
 import {GetPhotos} from '../../components/admin/GetPhotos';
 import {Counters} from '../../components/Counters/Counters';
 import {GroupsContainer} from '../Groups/GroupsContainer';
+import {CheckerContainer} from '../Checker/CheckerContainer';
 
 const AdminPanelContainer = () => {
 
@@ -15,8 +16,8 @@ const AdminPanelContainer = () => {
 
             <Counters/>
             <CheckGroup/>
-            <GetPhotos/>
-            <GetComments/>
+            <CheckerContainer/>
+
         </Fragment>
     );
 };

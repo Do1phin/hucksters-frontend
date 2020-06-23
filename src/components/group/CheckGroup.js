@@ -5,7 +5,7 @@ import {call, getMembersGroupFromVk, getMembersInfoFromVk} from '../admin/_api-v
 // API
 import { APICreateMembersToDB, APIUpdateMembersInDB} from '../../containers/Members/members.api';
 // React components
-import {GetAlbums} from '../admin/GetAlbums';
+import {CheckMemberContainer} from '../../containers/CheckMember/CheckMemberContainer';
 
 const CheckGroup = () => {
     // const group_id = 39284544;
@@ -44,7 +44,7 @@ const CheckGroup = () => {
 
     return (
         <Fragment>
-            <GetAlbums/>
+            <CheckMemberContainer/>
         </Fragment>
     )
 };

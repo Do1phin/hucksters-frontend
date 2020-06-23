@@ -99,19 +99,17 @@ const APICreateMembersToDB = (membersArray) => new Promise(async (resolve, rejec
 
 const APIUpdateMembersInDB = (membersWithInfoArray) => new Promise((resolve, reject) => {
 	// const dispatch = useDispatch();
-	// dispatch(setCheckStatusString('- обновление информации мемберов в базе...'));
-	console.log('updateMembersInDB ', membersWithInfoArray);
-
+	// store.dispatch(setCheckStatusString('- обновление информации мемберов в базе...'));
 	membersWithInfoArray.map((item) => {
 		try {
-			fetch('/members/update', {
+			fetch('./members/update', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify(item),
 			}).then((response) => {
-				resolve(response.json());
+				if (response.ok) resolve(response);
 			}).catch((err) => reject(err));
 		} catch (e) {
 			reject(e);
