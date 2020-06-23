@@ -7,7 +7,14 @@ import {
     ListSettingsSetItemsToSkipAction,
     ListSettingsSetTotalLoadedItemsAction
 } from '../../redux/actions/listSettings.actions';
-import {SearchStringUpdateAsyncAction} from './search.actions';
+import {
+    SearchStringUpdateAsyncAction,
+    HandleSubmitSearchFormAction,
+    HandleClearSearchFormAction,
+    HandleChangeSearchFormAction
+} from './search.actions';
+
+import * as searchActions from './search.actions';
 // Styles
 import '../../styles/search.style.scss';
 
@@ -31,7 +38,7 @@ const SearchContainer = () => {
             dispatch(ListSettingsSetItemsToSkipAction(0));
             dispatch(ListSettingsSetFetchedPartItemsAction(0));
             dispatch(ListSettingsSetTotalLoadedItemsAction(0));
-            dispatch(SearchStringUpdateAsyncAction(text));
+            dispatch(searchActions.SearchStringUpdateAsyncAction(text));
         }
     };
 
