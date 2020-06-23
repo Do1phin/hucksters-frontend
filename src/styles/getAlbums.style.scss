@@ -1,11 +1,11 @@
-.album-loader {
+.checker {
     display: grid;
     grid-template-columns: 300px 150px 1fr;
     column-gap: 5px;
     align-items: center;
 }
 
-.album-loader__settings input {
+.checker__settings input {
     display: list-item;
 }
 
