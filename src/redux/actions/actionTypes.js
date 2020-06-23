@@ -16,6 +16,7 @@ export const types = {
     GROUP_MEMBERS_GET: 'admin/GROUP_MEMBERS_GET',
 
     // Check members
+    CHECK_MEMBERS_ALL_PARAMETERS: 'check_members/ALL_PARAMETERS',
     CHECK_MEMBERS_ALL: 'check_members/ALL',
     CHECK_MEMBERS_WITH_INFO: 'check_members/WITH_INFO',
     CHECK_MEMBERS_CLOSED: 'check_members/CLOSED',
