@@ -8,17 +8,17 @@ const initialState = {
 
 const checkerReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.CHECKER_SET_CHECK_THING:
+        case types.SET_CHECKER_THING:
             return {
                 ...state,
                 thing: action.payload
             };
-        case types.CHECKER_SET_CHECK_STEP:
+        case types.SET_CHECKER_STEP:
             return {
                 ...state,
                 step: action.payload
             };
-        case types.CHECKER_SET_CHECK_STATUS:
+        case types.SET_CHECKER_STATUS:
             return {
                 ...state,
                 status: action.payload

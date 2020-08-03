@@ -9,7 +9,7 @@ const initialState = {
 
 const favoriteReducer = (state = initialState, action) => {
     switch (action.type) {
-        case types.FAVORITES_FILL:
+        case types.FILL_FAVORITES_ALL:
             return {
                 ...state,
                 user_id: action.payload.user_id,
@@ -17,17 +17,17 @@ const favoriteReducer = (state = initialState, action) => {
                 favorite_albums: [...action.payload.favorite_albums],
                 favorite_photos: [...action.payload.favorite_photos],
             };
-        case types.FILL_MEMBER:
+        case types.FILL_FAVORITES_MEMBERS:
             return {
                 ...state,
                 favorite_members: [...state, action.payload],
             };
-        case types.FILL_ALBUM:
+        case types.FILL_FAVORITES_ALBUMS:
             return {
                 ...state,
                 favorite_albums: [...state, action.payload],
             };
-        case types.FILL_PHOTO:
+        case types.FILL_FAVORITES_PHOTOS:
             return {
                 ...state,
                 favorite_photos: [...state, action.payload],
