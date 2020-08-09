@@ -11,23 +11,30 @@ import {createLogger} from 'redux-logger';
 import {customThunk} from './middleware/log.middleware';
 
 const loggerMiddleware = createLogger({
-    duration: true,
-    collapsed: true
+	duration: true,
+	collapsed: true
 });
 
 const sagaMiddleware = createSagaMiddleware();
+const reduxDevTools =
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
-const middleware = [sagaMiddleware, thunkMiddleware, loggerMiddleware, customThunk];
+const middleware = [
+	sagaMiddleware,
+	thunkMiddleware,
+	loggerMiddleware,
+	customThunk
+];
 
 const initialState = {};
 
 export const store = createStore(
-    rootReducer,
-    initialState,
-    compose(
-        applyMiddleware(...middleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+	rootReducer,
+	initialState,
+	compose(
+		applyMiddleware(...middleware),
+		reduxDevTools
+	)
 );
 
 sagaMiddleware.run(rootSaga);
