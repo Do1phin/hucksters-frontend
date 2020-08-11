@@ -1,21 +1,28 @@
-import { SEARCH_STRING_UPDATE } from './search.constants';
+// Core
+import produce from 'immer';
+// Redux types
+import { searchTypes } from './search.constants';
 
 const initialState = {
-    search_text: ''
+	search_text: '',
 };
 
-const searchReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case SEARCH_STRING_UPDATE:
-            return {
-                ...state,
-                search_text: action.payload
-            };
-        default:
-            return state
-    }
-};
+const searchReducer = produce((draft = initialState, action) => {
+
+	switch (action.type) {
+		case searchTypes.UPDATE_SEARCH_STRING:
+			draft.search_text = action.payload;
+			break;
+
+		case searchTypes.CLEAR_SEARCH_STRING:
+			draft.search_text = '';
+			break;
+
+		default:
+			return draft;
+	}
+});
 
 export {
-    searchReducer
+	searchReducer,
 };

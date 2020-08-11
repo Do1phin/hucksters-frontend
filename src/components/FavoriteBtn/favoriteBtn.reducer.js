@@ -1,12 +1,7 @@
-import {
-    ADD_MEMBER_TO_FAVORITE,
-    ADD_ALBUM_TO_FAVORITE,
-    ADD_PHOTO_TO_FAVORITE,
-    REMOVE_MEMBER_TO_FAVORITE,
-    REMOVE_ALBUM_TO_FAVORITE,
-    REMOVE_PHOTO_TO_FAVORITE,
-    // FILL_FAVORITES
-} from './favoriteBtn.constants';
+// Core
+import produce from 'immer';
+// Redux types
+import { types } from './favoriteBtn.constants';
 
 const initialState = {
     user_id: '',
@@ -15,8 +10,8 @@ const initialState = {
     favorite_photos: []
 };
 
-const favoriteReducer = (state = initialState, action) => {
-    console.log('favoriteReducer')
+const favoriteReducer = produce((draft = initialState, action) => {
+
     switch (action.type) {
         // case FILL_FAVORITES:
         //     return {
@@ -26,25 +21,23 @@ const favoriteReducer = (state = initialState, action) => {
         //         favorite_albums: [...action.payload.favorite_albums],
         //         favorite_photos: [...action.payload.favorite_photos],
         //     };
-        case ADD_MEMBER_TO_FAVORITE:
-            return {
-                ...state,
-                favorite_members: [...state, action.payload],
-            };
-        case ADD_ALBUM_TO_FAVORITE:
-            return {
-                ...state,
-                favorite_albums: [...state, action.payload],
-            };
-        case ADD_PHOTO_TO_FAVORITE:
-            return {
-                ...state,
-                favorite_photos: [...state, action.payload],
-            };
+
+        case types.ADD_ALBUM_TO_FAVORITE:
+            draft.favorite_albums = [...draft, action.payload];
+            break;
+
+        case types.ADD_MEMBER_TO_FAVORITE:
+            draft.favorite_members = [...draft, action.payload];
+            break;
+
+        case types.ADD_PHOTO_TO_FAVORITE:
+            draft.favorite_photos = [...draft, action.payload];
+            break;
+
         default:
-            return state;
+            return draft;
     }
-};
+});
 
 export {
     favoriteReducer
