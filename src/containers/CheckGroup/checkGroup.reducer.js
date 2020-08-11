@@ -1,26 +1,28 @@
-import { CHECK_GROUP_SET_ID_CHECKING_GROUP, CHECK_GROUP_SET_GROUP_SIZE } from './checkGroup.constants';
+// Core
+import produce from 'immer';
+// Redux types
+import { checkGroupTypes } from './checkGroup.constants';
 
 const initialState = {
     group_id: null,
     group_size: null,
 };
 
-const checkGroupReducer = (state = initialState, action) => {
+const checkGroupReducer = produce((draft = initialState, action) => {
+
     switch (action.type) {
-        case CHECK_GROUP_SET_ID_CHECKING_GROUP:
-            return {
-                ...state,
-                group_id: action.payload
-            };
-        case CHECK_GROUP_SET_GROUP_SIZE:
-            return {
-                ...state,
-                group_size: action.payload
-            };
+        case checkGroupTypes.SET_ID_OF_THE_CHECKED_GROUP:
+            draft.group_id = action.payload;
+            break;
+
+        case checkGroupTypes.SET_SIZE_OF_THE_CHECKED_GROUP:
+            draft.group_size = action.payload;
+            break;
+
         default:
-            return state
+            return draft
     }
-};
+});
 
 export {
     checkGroupReducer
